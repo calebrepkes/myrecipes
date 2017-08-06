@@ -4,7 +4,13 @@
   "description": "My personal recipes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "stylus source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+    "clean": "rm -rf static/css && mkdir -p static/css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "nodemon server.js -e js,pug",
+    "start": "node server.js"
   },
   "keywords": [
     "my",
@@ -15,9 +21,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
-    "jade": "^1.11.0",
     "morgan": "^1.8.2",
-    "pug": "^0.1.0",
-    "styles": "^0.2.1"
+    "nodemon": "^1.9.2",
+    "pug": "^2.0.0-rc.3",
+    "styles": "^0.2.1",
+    "stylus": "^0.54.5"
+  },
+  "repository" : {
+    "type" : "git"
+  , "url" : "https://github.com/npm/npm.git"
   }
 }
