@@ -1,7 +1,22 @@
 doctype html
-html
+html(lang="en")
   head
-    title= title
+    header
+      block title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    header
+      block content2
+    .container
+      .main-content
+        block section1
+        block section2
+        block section3
+        block section4
+        block section5
+        block section6
+      .sidebar
+        block sidebar
+  footer
+    p Running on Node with Express, Pug and Stylus
