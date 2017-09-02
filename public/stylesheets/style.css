@@ -54,7 +54,7 @@ header {
    * prefixes here. Nib will
    * add them for us
    */
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid #ccc;
   margin-left: 20px;
   background-color: #faf9f0;
@@ -72,6 +72,11 @@ header {
   font-size: 13px;
   padding: 0px 10px;
   margin-bottom: 10px;
+}
+.widget table,
+.widget th,
+.widget td {
+  border: 2px dotted #000;
 }
 p {
   line-height: 1.8;

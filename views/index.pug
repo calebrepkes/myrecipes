@@ -36,4 +36,8 @@ block section6
 block sidebar
   .widget
     h2= ingredientsText
-    p= ingredientsObject
+    table
+      for amount, ingredient in ingredientsObject
+        tr
+          td= ingredient
+          td= amount
